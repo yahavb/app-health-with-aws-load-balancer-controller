@@ -1,5 +1,5 @@
-#!/bin/bash -x
+#!/bin/bash 
 export ARCH=$(uname -m)
-aws cloudwatch put-metric-data --metric-name node_instance_arch --namespace ${DEPLOY_NAME} --value $ARCH
-echo $?
+aws cloudwatch put-metric-data --metric-name ${ARCH} --namespace ${DEPLOY_NAME} --value 1
+echo cloudwatch put ret: $?
 python ./manage.py runserver 0.0.0.0:8000
