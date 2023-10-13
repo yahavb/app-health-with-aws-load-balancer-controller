@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 while true
 do
   cmd="curl -o /dev/null -sL ${APP_URL}/runtime/" 
